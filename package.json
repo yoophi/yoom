@@ -1,0 +1,15 @@
+{
+  "name": "yoom",
+  "version": "0.1.0",
+  "description": "Zoom Clone using NodeJS, WebRTC and Websockets.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yoophi/yoom.git"
+  },
+  "author": "Pyunghyuk Yoo",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yoophi/yoom/issues"
+  },
+  "homepage": "https://github.com/yoophi/yoom#readme"
+}
