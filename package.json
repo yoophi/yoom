@@ -8,6 +8,9 @@
   },
   "author": "Pyunghyuk Yoo",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon"
+  },
   "bugs": {
     "url": "https://github.com/yoophi/yoom/issues"
   },
