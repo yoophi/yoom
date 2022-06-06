@@ -61,11 +61,16 @@ function makeMessage(type, payload) {
 
 form.addEventListener("submit", handleRoomSubmit);
 
-socket.on("welcome", (userNickname) => {
+socket.on("welcome", (userNickname, newCount) => {
+  console.log({ userNickname, newCount });
+  const h3 = room.querySelector("h3");
+  h3.innerText = `Room ${roomName} (${newCount})`;
   addMessage(`${userNickname} joined!`);
 });
 
-socket.on("bye", (userNickname) => {
+socket.on("bye", (userNickname, newCount) => {
+  const h3 = room.querySelector("h3");
+  h3.innerText = `Room ${roomName} (${newCount})`;
   addMessage(`${userNickname} left!`);
 });
 
