@@ -9,6 +9,7 @@ const call = document.getElementById("call");
 let myStream;
 let muted = false;
 let cameraOff = false;
+let roomName;
 const welcome = document.getElementById("welcome");
 const welcomeForm = document.querySelector("form");
 
@@ -96,6 +97,7 @@ function handleWelcomeSubmit(event) {
   event.preventDefault();
   const input = welcomeForm.querySelector("input");
   socket.emit("join_room", input.value, startMedia);
+  roomName = input.value;
   input.value = "";
 }
 
@@ -103,3 +105,7 @@ muteBtn.addEventListener("click", handleMuteClick);
 cameraBtn.addEventListener("click", handleCameraClick);
 cameraSelect.addEventListener("input", handleCameraChange);
 welcomeForm.addEventListener("submit", handleWelcomeSubmit);
+
+socket.on("welcome", () => {
+  console.log("someone joined!");
+});
